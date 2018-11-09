@@ -9,31 +9,32 @@ body, html {
 .contaerheader{
 
     margin-left: auto;
-    margin-right:auto; ;
+    margin-right:auto;
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+    justify-content: center;
 }
 .header {
 	height: 80px;
 	background: url(starfield-banner.jpg);
-	  max-width: 1366px;
+	  max-width: 1000px;
 }
 
 .header img {
-	float: left;
 	padding: 10px;
 	width: 80px;
 	    vertical-align: middle;
 	
 }
 
-.header ul {
-	float: left; 
+.header ul { 
 	margin: 0;
 
 }
 
 .header ul li {
 	list-style:none;
-	float: left;
 	height: 76px;
 	
 }
