@@ -6,37 +6,59 @@ body, html {
 	padding: 0;
 	background: black;
 }
+.page{
+padding-top:65px;
+padding-bottom:10px;
+padding-left:40px;
+padding-right:40px;
+}
+
 .contaerheader{
 
     margin-left: auto;
     margin-right:auto;
+
+
     display: flex;
-    flex-direction: column;
-    align-items:baseline;
-    justify-content: center;
+   align-items: center;
+   flex-direction:row;
+   justify-content: center;
+
+   position: sticky; top: 0px;
 }
 .header {
-	height: 80px;
 	background: url(starfield-banner.jpg);
-	  max-width: 1000px;
+
+	height: 75px;
+	max-width:1300px;
+
+	margin-right:auto;
+	margin-left:auto;
 }
 
 .header img {
 	padding: 10px;
 	width: 80px;
-	    vertical-align: middle;
+	vertical-align: middle;
+	float: left;
 	
 }
 
-.header ul { 
+.header ul {
+	float:left;
 	margin: 0;
 
 }
 
 .header ul li {
 	list-style:none;
+	float: left;
 	height: 76px;
 	
+}
+.header ul li {
+
+height: 100px;
 }
 
 .header ul li:hover {
@@ -69,4 +91,64 @@ body, html {
 	-moz-osx-font-smoothing: grayscale;
     font-family: 'Titillium Web', sans-serif
 }
+.imging
+{
+	height: 37px !important;
+	width: auto !important;
+	margin-top: 11px;
+}
+.allw
+{
+margin-right:173px; 
+margin-left:173px;
+
+}
 .bodycontaer
+{
+     width: auto;
+    margin: 0px auto !important;
+    margin-top: 0px !important;
+    margin-right: auto !important;
+    margin-bottom: 0px !important;
+    margin-left: auto !important;
+}
+.bodys
+	{
+    background: url(https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/NASA-AD-background.png);
+    background-color: #000;
+    background-position: 0em -10em;
+    background-repeat: no-repeat;
+   
+   /* margin-top: 80px;*/
+
+	}
+ .h2
+	{
+    color: #fff;
+    font-weight: bold;
+    font-size: 5em !important;
+    padding: 10px 10px 10px 0px;
+    vertical-align: middle;
+    display: inline-block;
+        margin-top: 20px;
+    margin-bottom: 10px;
+
+
+	}
+ .h3
+	{
+	color: #83AEF7 !important;
+    font-weight: bold ;
+    font-size: 1.7em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 1em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+
+}
+
+
+
+
