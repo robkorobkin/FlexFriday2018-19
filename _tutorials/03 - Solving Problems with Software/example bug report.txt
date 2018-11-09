@@ -1,0 +1,23 @@
+
+
+
+BUG REPORT
+--
+
+User Stories:
+
+Intended Functionality Story:
+- Jean Marie navigates his browser to: http://localhost/compa_studio/members/
+- There is a html file there
+- Jean Paul navigates his browser to: http://localhost/compa_studio/members/
+- He sees the same html file
+
+
+Broken Functionality Story:
+- Jean Marie navigates his browser to: http://localhost/compa_studio/members/
+- There is a html file there
+- Jean Paul navigates his browser to: http://localhost/compa_studio/members/
+- There is no html file
+
+
+

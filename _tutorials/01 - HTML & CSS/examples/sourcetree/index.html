@@ -1,0 +1,204 @@
+<html>
+	<head>
+		<script src="https://use.fontawesome.com/ad1b8c601a.js"></script>
+		<style>
+			body {
+				background: black;
+				font-family: sans-serif;
+			}
+			.mainWrap {
+				width: 1050px;
+				height: 547px;
+				margin: 100px auto;
+				background: white;
+			}
+
+			.topLine {
+				background: #e0e0e0;
+				height: 40px;
+				text-align: center;
+			}
+
+				.windowControls {
+					float: left;
+				}
+					.windowControls a {
+						height: 16px;
+						width: 16px;
+						border-radius: 8px;
+						background: black;
+						display: block;
+						float: left;
+						margin: 10px 5px;
+					}
+					.windowControls .close {
+						background: #ff564f;
+					}
+					.windowControls .minimize {
+						background: #ffb429;
+					}
+					.windowControls .expand {
+						background: #24c238;
+					}
+
+				.window_title {
+					line-height: 30px;
+					font-size: 13px
+				}
+
+			.mainNav {
+				height: 50px;
+				background: #e0e0e0;
+				border-bottom: solid 1px #999;
+			}
+
+				.mainNav .left {
+					float: left;
+				}
+
+				.mainNav .right {
+					float: right;
+				}
+
+				.mainNav a {
+					font-size: 11px;
+					text-align: center;
+					width: 46px;
+					display: block;
+					float: left;
+					color: #444;
+				}
+				.mainNav img {
+					height: 20px;
+					padding: 4px 8px;
+				}
+
+				.mainNav .right a {
+					width: 80px;
+				}
+				.mainNav .right img {
+					padding: 4px 20px;
+				}
+
+			.sidebar {
+				width: 145px;
+				height: 100%;
+				background: #f1f1f0;
+				float: left;
+			}
+				.sidebar ul {
+					margin: 0;
+					padding: 0;
+				}
+					.sidebar li {
+						list-style: none;
+						margin: 0;
+						padding: 10px 10px 20px;
+						color: #777;
+						font-size: 13px
+					}
+						.sidebar li ul {
+							margin-top: 5px;
+							padding-left: 20px
+						}
+							.sidebar li li {
+								padding: 5px 10px;
+								font-size: 12px;
+								color: black;
+							}
+
+			.mainContent {
+				width: 905px;
+				background: white;
+				height: 100%;
+				float: left;
+			}
+
+
+
+		</style>
+	</head>
+	<body>
+		<div class="mainWrap">
+			<div class="topLine">
+				<div class="windowControls">
+					<a class="close"></a>
+					<a class="minimize"></a>
+					<a class="expand"></a>
+				</div>
+				<span class="window_title">Compa! Studio (Git)</span>
+			</div>
+			<div class="mainNav">
+				<div class="left">
+					<a style="margin-right: 40px; margin-left: 5px">
+						<img src="plus.png" />
+						Commit
+					</a>
+					<a>
+						<img src="plus.png" />
+						Pull
+					</a>
+					<a>
+						<img src="plus.png" />
+						Push
+					</a>
+					<a style="margin-right: 30px">
+						<img src="plus.png" />
+						Fetch
+					</a>
+					<a>
+						<img src="plus.png" />
+						Branch
+					</a>
+					<a style="margin-right: 40px;" >
+						<img src="plus.png" />
+						Merge
+					</a>
+					<a>
+						<img src="plus.png" />
+						Stash
+					</a>
+				</div>
+				<div class="right">
+					<a>
+						<img src="plus.png" />
+						Show in Finder
+					</a>
+					<a>
+						<img src="plus.png" />
+						Terminal
+					</a>
+					<a>
+						<img src="plus.png" />
+						Settings
+					</a>
+				</div>
+			</div>
+			<div class="sidebar">
+				<ul>
+					<li>
+						<a>WORKSPACE</a>
+						<ul>
+							<li><a>File Status</a></li>
+							<li><a>History</a></li>
+							<li><a>Search</a></li>
+						</ul>
+					</li>
+					<li>
+						<a>WORKSPACE</a>
+						<ul>
+							<li><a>File Status</a></li>
+							<li><a>History</a></li>
+							<li><a>Search</a></li>
+						</ul>
+					</li>
+				</ul>
+
+			</div>
+			<div class="mainContent">
+			</div>
+
+		</div>
+
+	</body>
+</html>

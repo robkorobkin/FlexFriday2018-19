@@ -1,0 +1,171 @@
+<html>
+	<head>
+		<style>
+			/* THIS PUTS A THIN GRAY BOX WITH A TRANSLUCENT BLUE BACKGROUND AROUND EVERY ELEMENT */
+			div, table, td, a { border: solid 1px #ccc; padding: 5px; margin: 10px; background: url(tile.png); }
+			
+		</style>
+
+	</head>
+	<body>
+	
+	
+		<div class="stage">
+			<div class="headerFrame">
+				<div class="window_ctrls">
+					<img src="images/window/close.png" />
+					<img src="images/window/minimize.png" />
+					<img src="images/window/expand.png" />					
+				</div>
+				<div class="play_ctrls">
+					<table>
+						<tr>
+							<td><img src="images/play/back.png" /></td>
+							<td><img src="images/play/play.png" /></td>
+							<td><img src="images/play/next.png" /></td>
+							<td><img src="images/play/speaker.png" /></td>
+						</tr>
+					</table>					
+				</div>
+				<div class="mode_symbol">
+					<img src="images/modes/music.png" />
+				</div>
+				<div class="player_frame">
+					<div class="top">
+						<div class="left">
+							<img src="images/player/random.png" />
+							<div class="track_status">3:27</div>
+						</div>
+						<div class="center">
+							<div class="track_name">Track 02</div>
+							<div class="record_name">
+								Brzowski - A Fitful Sleep
+							</div>
+						</div>
+						<div class="right">
+							<img src="images/player/playlist.png" />
+							<div class="track_status">-2:54</div>
+						</div>						
+					</div>
+					<div class="bottom">
+						<img src="images/track_status.png" />
+					</div>
+				</div>
+			</div>
+		
+		
+			<div class="menu_bar">
+				<div class="mode_icons">
+					<div class="active">
+						<img src="images/menu/music.png" />
+					</div>
+					<div class="inactive">
+						<img src="images/menu/video.png" />
+					</div>
+					<div class="inactive">
+						<img src="images/menu/tv.png" />
+					</div>
+					<div class="inactive">
+						<img src="images/menu/other.png" />
+					</div>
+				</div>
+				<div class="component_links">
+					<a class="active">My Music</a>
+					<a class="inactive">Playlists</a>
+					<a class="inactive">Match</a>
+					<a class="inactive">Radio</a>
+					<a class="inactive">iTunes Store</a>
+				</div>
+			</div>
+			
+			<div class="col_browser">
+				<div class="column">
+					<div class="header">Genres</div>
+					<div class="list">
+						<a class="selected">All (157 Generes)</a>
+						<a>A Capella</a>
+						<a>A Capella</a>
+						<a>A Capella</a>
+						<a>A Capella</a>
+						<a>A Capella</a>
+						<a>A Capella</a>
+						<a>A Capella</a>
+					</div>
+				</div>
+				<div class="column">
+					<div class="header">Artists</div>
+					<div class="list">
+						<a>Bright Eyes</a>
+						<a>Aesop Rock</a>
+						<a>AFI</a>
+						<a>Against Me!</a>
+						<a>Bright Eyes</a>
+						<a>Aesop Rock</a>
+						<a>AFI</a>
+						<a>Against Me!</a>
+						<a  class="selected">Brzowski</a>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+
+			<div class="playlist">
+				<div class="playlist_headers" >
+					<div class="col1 col">Album</div>
+					<div class="col2 col">&nbsp;</div>
+					<div class="col3 col"><img src="images/check.png" /></div>
+					<div class="col4 col">Name</div>
+				</div>
+			
+				<div class="playlist_main">
+					<div class="col1 col">
+						<div class="album_image">
+							<img src="images/player/generic_music.png" />
+						</div>
+						<div class="album_info">
+							<div class="album_title">A Fitful Sleep</div>
+							<div class="album_artist">Brzowski</div>
+							<div class="rating">
+								<img src="images/player/star.png" />
+								<img src="images/player/star.png" />
+								<img src="images/player/star.png" />
+								<img src="images/player/star.png" />
+								<div class="spacer">.</div>																					
+							</div>
+						</div>
+					</div>
+					<table class="other_cols">
+						<tr class="row active">
+							<td class="col2 col">1</td>
+							<td class="col3 col">
+								<img src="images/playlist/ondeck.png" />
+							</td>
+							<td class="col4 col">
+								Track 01
+								<img src="images/player/track_status.png" class="track_status" />
+							</td>
+						</tr>
+						<tr class="row">
+							<td class="col2 col">2</td>
+							<td class="col3 col">
+								<img src="images/playlist/ondeck.png" />
+							</td>
+							<td class="col4 col">
+								Track 02
+							</td>
+						</tr>
+						<tr class="row">
+							<td class="col2 col">3</td>
+							<td class="col3 col">
+								<img src="images/playlist/ondeck.png" />
+							</td>
+							<td class="col4 col">
+								Track 03
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>			
+		</div>
+	</body>
+</html>

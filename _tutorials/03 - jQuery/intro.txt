@@ -1,0 +1,69 @@
+
+Web Coding Languages
+--
+HTML    - What it is
+CSS     - What it looks like
+JS      - What it does
+
+
+JavaScript
+----
+- Object-Oriented Language
+- Interpreted by Web Browsers
+- Hardware >> Operating System >> Browser >> JavaScript Application
+
+
+Uses
+--
+
+When does it do it?
+- Handle EVENT Callbacks: Clicks, MouseOver, Focus, Blur, KeyUp
+
+
+What does it do to the page?
+- Dynamically Change HTML and CSS (adding\removing\changing elements)
+
+
+Does it ask the server for any additional stuff?
+- Request additional information from the server (without reloading the page)
+  - AJAX = Asynchronous JavaScript And XML
+
+
+Does it have to crunch any numbers?
+- Perform calculations
+
+
+
+Example JS Script
+--
+WHEN
+  - I select the search box (event)
+
+PAGE CHANGES
+  - Turn it blue and show a suggestion box (HTML manipulation)
+
+SERVER COMMUNICATION
+  - Fetch a list of suggestions from the server (asynch. server communication \ AJAX)
+
+CALCULATION
+  - Count how many new messages I have (calculation)
+
+--
+
+What should we make a list of?
+5  - Local Restaurants
+0  - Busses
+1  - Academic Departments
+2  - Clothing Lines \ Brands
+2  - Compa! Members
+
+--
+
+Restaurants Table
+
+ID  Name            Address           Cousine
+-------------------------------------------------------------------------
+1   Local Sprouts   649 Congress St.  Organic
+2   Green Elephant  608 Congress St.  Vegetrian
+3   Buja Belle      St. John St.      Burundian
+4   Hot Suppa       Congress St.      Diner

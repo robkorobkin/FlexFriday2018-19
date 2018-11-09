@@ -1,0 +1,202 @@
+<html>
+	<head>
+		
+		<style>
+			body	{ background: black; box-sizing: border-box;}
+			*, *:before, *:after {
+			  box-sizing: inherit;
+			}
+
+			.title { margin-top: 100px; text-align: center; font-family: arial; font-size: 14px; color: white; }
+			.frame1 { border: solid 1px #ccc; width: 502px; margin: 10px auto; height: 500px; background: white; }
+			.frame1 .stage { float: left; width: 300px; overflow: auto; height: 498px; 
+								border-right: solid 1px #ccc; position: relative; 
+								
+  -webkit-align-items: center;
+          align-items: center;
+
+								
+								}
+			.frame1 .controlPanel { float: right; width: 200px; font-family: arial; 
+										background: #f0f0f0; height: 498px; overflow: auto; padding-bottom: 10px; }
+			.frame1 label { font-weight: bold; font-size: 11px; text-transform: uppercase; display: block; 
+								margin-top: 10px;  }
+			.frame1 .deleter { cursor: pointer; padding-left: 10px;}
+			.field_adder { border-bottom: solid 1px #ccc; padding-bottom: 10px; padding-left: 10px; }
+		</style>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		
+		<script>
+			
+			var app = angular.module('CssTutorialApp', []);
+
+			app.controller('CssTutorialCtrl', ['$scope',
+				function($scope){
+					$scope.style = {};
+					$scope.fieldList = [];
+					$scope.newStyle = 'Select...';
+					
+					// declare prop names
+					$scope.propNames = [
+						{ 
+							group: 'text',
+							fields: [	'color', 'font-size', 'font-weight', 'line-height', 'letter-spacing',
+										'text-align', 'text-decoration', 'font-family', 'font-style']
+						},
+						{ 
+							group: 'box',
+							fields: [	'display', 'background', 'vertical-align',
+										'width', 'height',  'overflow',
+										'border','margin','padding', 'box-sizing',
+										'min-height', 'min-width',
+										'max-height', 'min-height', 'border-radius']
+						},
+						{ 
+							group: 'position',
+							fields: ['position', 'float', 'top', 'left', 'bottom', 'right']
+						},						
+						{ 
+							group: 'other',
+							fields: ['cursor']
+						}
+					];
+					
+					
+					
+					// build propList object from fieldNames
+					$scope.propList = []
+					$.each($scope.propNames, function(groupIndex, group) {
+						$scope.propList[groupIndex] = {
+							groupName: group.group,
+							properties: []
+						}
+						$.each(group.fields, function(index, prop){
+							var jsName = prop;
+							var dashIndex = prop.indexOf('-');
+							if(dashIndex != -1){
+								var jsName = prop.substr(0,dashIndex);
+								jsName += prop[dashIndex + 1].toUpperCase();
+								jsName += prop.substring(dashIndex + 2);
+							}
+					
+							var prop = {
+								property: prop,
+								jsName: jsName
+							}
+							$scope.propList[groupIndex].properties.push(prop);
+						});
+					});
+
+
+					
+					
+					
+					// add a style
+					$scope.addStyle = function(){
+
+						// figure out which style was selected
+						var styleName = $scope.newStyle;
+						$.each($scope.propList, function(groupIndex, group) {
+							$.each(group.properties, function(index, prop){
+								if(prop.property == styleName){
+									 style = angular.copy(prop);
+									 style.active = true;
+								}
+							});
+						});
+
+						// and add to "fieldList" - for display in form
+						$scope.fieldList.push(style);
+						
+					}
+					
+					// if deleting, remove from style (active) and fieldList (form)
+					$scope.deleteProperty = function(field){
+						delete $scope.style[field.jsName]; 
+						console.log($scope.style);
+						$.each($scope.fieldList, function(fieldIndex, input){
+							if(input.property == field.property){
+								for(k in input){
+									input[k] = false;
+								}
+							}							
+						});
+						$scope.updateStyles();				
+					}
+					
+					// if form state changes, update styles										
+					$scope.$watch("style", function(){
+						$scope.updateStyles();
+					}, true);
+					
+					
+					// update styles
+					$scope.updateStyles = function(){
+					
+						// iterate through style object and set properties
+						$.each($scope.style, function(property, value){
+							var styleObj = {};
+							styleObj[property] = value;
+
+							$('.text').css(styleObj);
+						});
+						
+						// iterate through all props, if not in style obj, set to empty string
+						$.each($scope.propList, function(groupIndex, group) {
+							$.each(group.properties, function(index, property){
+								var pname = property.property;
+								if(!(property.jsName in $scope.style)) {
+									var styleObj = {};
+									styleObj[pname] = '';
+									$('.text').css(styleObj);
+								}
+							});
+						});
+					}
+					
+				}
+			]);
+		</script>
+	</head>
+	
+	<body>
+		<div class="cssTutorialFrame" ng-app="CssTutorialApp" ng-controller="CssTutorialCtrl">
+			<div class="title">Rob's CSS Machine</div>
+			<div class="frame1">
+				<div class="stage">
+					<div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+				</div>
+				<div class="controlPanel">
+					<div class="field_adder">
+						<label>Add Property</label>
+						<select ng-model="newStyle" ng-change="addStyle()">
+							<option>Select...</option>
+							<optgroup ng-repeat="optGroup in propList" label="{{optGroup.groupName}}">
+								<option ng-repeat="(index, prop) in optGroup.properties" 
+										value="{{prop.property}}">
+									{{prop.property}}
+								</option>
+							</optgroup>
+						</select>
+					</div>
+				
+					<table>
+						<tr ng-repeat="(fieldIndex, field) in fieldList" ng-if="field.active">
+							<td>
+								<div class="deleter" ng-click="deleteProperty(field)">X&nbsp;&nbsp;</div>
+							</td>
+							<td>
+								<label>{{field.property}}</label>
+								<input ng-model="style[field.jsName]" />
+							</td>	
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>		
+		
+		
+	</body>
+</html>

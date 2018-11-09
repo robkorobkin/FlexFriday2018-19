@@ -1,0 +1,57 @@
+
+What we've done so far:
+
+UNIT ONE: Getting Set Up
+- Using Atom
+- Using Git \ GitHub
+- Setting up a local server
+
+
+UNIT TWO: Building User Interfaces
+- HTML
+- CSS
+- Building a webpage
+
+
+UNIT THREE: Managing Data and Information
+- SQL
+- Structuring data
+- Writing queries
+
+
+UNIT FOUR: Putting it altogether
+- Defining a problem?
+- Wireframes
+- Writing specifications
+
+
+
+
+
+SQL = Standard Query Language
+
+Used to take CRUD actions on a database.
+- Create (insert)
+- Read (select)
+- Update
+- Delete
+
+Database:
+- A collection of tables.
+- Each table is a collection of objects of the same type.
+- Each row is one object.
+- Each field \ column of a row is an attribute of that object.
+
+
+
+Let's come up with some example tables!
+
+Laptop
+- laptop_id (auto-incrementing primary key)
+- manufacturer
+- model
+- year
+- size
+- operating system
+- RAM
+- serial number

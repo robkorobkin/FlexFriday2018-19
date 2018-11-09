@@ -1,0 +1,58 @@
+
+
+<html>
+	<head>
+		<script
+			  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+			  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+			  crossorigin="anonymous"></script>
+
+		<script type="text/javascript">
+
+			// when the page loads, run this code...
+			$(function(){
+
+
+				// define a function "updateStage"
+				var updateStage = function(){
+				
+					// set a variable "room" to be the value of #rm_selector
+					var room = $('#rm_selector').val();
+
+					// use this variable to build an html string
+					var html = 	'<h1>' + room + '</h1>' + 
+								'<img src="rooms\\"' + room + '.png" />';
+
+
+					console.log('trying to render this html:');
+					console.log(html);
+
+
+					// insert this html string as the body of the HTML element with the id "stage"
+					$('#stage').html(html);
+				}
+				
+
+				// select the HTML element with the id "rm_selector"
+				var selectBox = $('#rm_selector');
+
+				// when the value of that element changes, call the function we defined above
+				selectBox.change(updateStage);
+
+			})
+			
+
+		</script>
+
+	</head>
+	<body>
+
+		<select id="rm_selector">
+			<option>Apple</option>
+			<option>Banana</option>
+		</select>
+
+		<div id="stage"></div>
+		
+	</body>
+</html>

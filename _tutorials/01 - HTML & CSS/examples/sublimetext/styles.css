@@ -1,0 +1,85 @@
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	background: #272822;
+
+
+}
+.topbar {
+	background: #ccc;
+	line-height: 15px;
+	height: 15px;
+	font-size: 13px;
+	padding: 5px
+}
+.menubar {
+	background: url(menu-bg.png);
+	font-size: 12px;
+	padding: 3px
+}
+.menubar a {
+	padding: 0 6px
+}
+
+.tabbar{
+	background: black;
+	border-bottom: 1px solid #444;
+	height: 39px;
+}
+.navArrow {
+	color: #868686;
+	font-size: 24px;
+	display: block;
+	float: left;
+	line-height: 39px;
+	padding: 0 6px;
+}
+.tab {
+	float: left;
+	background: #272822;
+	margin-top: 5px;
+	height: 34px;
+	border-radius: 25px 25px 0 0;
+	color: white;
+	font-size: 12px;
+	line-height: 35px;
+	padding: 0 25px;
+	width: 150px;
+	border: 1px solid #444;
+	border-bottom: none;
+	margin-left: 15px;
+}
+
+.tab .dot {
+	float: right;
+	line-height: 35px;
+	font-size: 9px;  
+	color: #7D7E7A;
+}
+
+table {
+	width: 100%;
+	color:lightgrey; font-size: 12px
+}
+
+tr {
+
+}
+
+td {
+
+}
+
+td:first-child {
+	width: 40px;
+	text-align: center;
+	color: #7d7e7a 
+}
+td:last-child {
+	color: white;
+}
+
+.htmlElement {
+	color: #D92672;
+}

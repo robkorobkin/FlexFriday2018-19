@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<!-- 
+
+	WELCOME!
+
+	This is a very simple HTML document.  
+
+	Let's look at how it's set up!
+
+	
+
+	DOCTYPE
+	========
+	You see that line at the top starting with "<!DOCTYPE..."?
+	That tells the browser that it's looking at HTML and should render it as a webpage instead of just outputting it line by line.
+
+
+
+	WELCOME TO HTML NODES \ ELEMENTS
+	===================================
+	Everything in HTML is divided into "nodes" - also called "HTML elements"
+	~~
+	<node>
+		<child_node></child_node>
+		<sibling_node></sibling_node>
+	</node>
+
+	We describe the relationships between nodes using the terms "parent", "child" and "sibling"
+
+	
+
+	Nodes also contain attributes, like this:
+	~~
+	<node attribute="value"></node>
+
+
+	And a body, like this:
+	~~
+	<node> afdkljasdfljkasdf;l </node>
+
+
+	COMMENTS
+	========================================
+	The only things in HTML that are not elements are comments.
+	They look like this: <!- - COMMENT - ->
+	Everything between the <!- and the -> of a comment is ignored when the HTML is "parsed"
+
+
+
+
+	<HTML>
+	========================================
+	The outermost element is the <html> node.  
+	It has a language attribute, which is set here to "en" for Engish.
+	This informs the browser that it's rendering the page in English.
+-->
+
+
+<html lang="en">
+	
+	<!--
+			
+		<head>
+		=========
+		The first child element within the <html> element is the <head> element.
+
+		The body of this element contains information and links to additional files that 
+		are necessary for the page to render but are not part of the page content itself.
+
+		For example, the title of the page, which appears at the top of your browser,
+		is included in the <head> using the <title> element.
+
+	-->
+
+	<head>
+
+		<title>HTML is fun!</title>
+
+	</head>
+
+
+
+	<!-- 
+		<body>
+		===========
+		Then we have the <body> element, which is where the actual page content goes
+
+		Let's look at some different kinds of elements within the body...
+	-->
+
+	<body>
+	
+		<!--		
+
+			TEXT
+			======
+			Most styles are applied to text using an approach called CSS, which we'll get into later.
+			For now, just notice that the text appears differently when contained within different kinds of nodes.
+
+		-->
+		<h1>Title</h1>
+		<p>Paragraph.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <i>eiusmod</i> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <b>Duis</b> aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim <u>id</u> est laborum.</p>
+
+		<h2>H2</h2>
+		<h3>H3</h3>
+		<h4>H4</h4>
+		<h5>H5</h5>
+
+
+
+		<!-- 
+			IMAGE 
+			=======
+			Images are conveyed using <img> nodes with the url of the image as the value of the node's "src" attribute.
+			Try finding an image online and editing this page to display it.
+		-->
+		<img src="https://s0.2mdn.net/ads/richmedia/studio/41440126/28384_20160216075434187_Compete_Child_728x90.jpg" />
+
+
+		<!-- 
+			LINE BREAKS
+			=======
+			Want a new line?  Just add a <br />
+		-->
+		<br />
+
+
+
+		<!-- 
+			LINKS
+			=======
+			Links are conveyed using <a> nodes with the target url as the value of the "href" attribute.
+			The body of the node will now be hyperlinked to bring the user to the new page when clicked.
+		-->
+		<a href="http://www.google.com">LINK</a>
+
+
+
+		<!--
+			LISTS
+			======
+			Notice the difference between an ordered list <ol> and an unordered list <ul>.
+		-->
+		<ul>
+			<li>item 1</li>
+			<li>item 2</li>
+			<li>item 3</li>
+		</ul>
+		<ol>
+			<li>item 1</li>
+			<li>item 2</li>
+			<li>item 3</li>
+		</ol>
+
+
+
+		<!-- 
+			HORIZONTAL RULE
+			=======
+			Want a line across the window, just add a <hr />
+		-->
+		<hr />
+
+
+
+		<!--
+			TABLES
+			=======
+			This is an HTML table.
+		-->
+		<table>
+			<tr>
+				<td>
+					pear
+				</td>
+				<td>
+					bananananana
+				</td>
+			</tr>
+			<tr>
+				<td>
+					bananananana
+				</td>
+				<td>
+					pear
+				</td>
+			</tr>
+		</table>
+
+
+		<!-- 
+			STYLING HTML
+			=============
+			There are two ways to "style" html.
+			One way is to use the style attribute, like this:
+
+		 -->
+		 <p style="	color: blue; 
+			 		font-size: x-large; 
+			 		font-style: italic;">Look, I'm blue!</p>
+
+
+		 <!-- 
+		 	CSS
+		 	===
+		 	The other way is to add a "class" attribute, and then 
+		 	write a rule defining how elements of that class
+		 	should look.
+		 -->
+		<p class="redText">Look, I'm red!</p>
+		<p class="redText">So am I!</p>
+		<style>
+			.redText { color: red;  }
+		</style>
+
+
+
+		<!-- 
+			Check out these two tools I made for learning more.
+		-->
+		<a href="../machine/single%20element/">Using CSS to style text</a>
+		<br /><br />
+		<a href="../machine/multi%20element/">Using CSS to practice positioning elements relative to each other</a>
+
+
+	</body>
+</html>

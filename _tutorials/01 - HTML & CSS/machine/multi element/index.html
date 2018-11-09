@@ -1,0 +1,221 @@
+<html>
+	<head>
+		
+		<style>
+			body	{ background: black; box-sizing: border-box; font-family: arial; }
+			*, *:before, *:after {
+			  box-sizing: inherit;
+			}
+
+			.title { margin-top: 100px; text-align: center; font-family: arial; font-size: 14px; color: white; }
+			.frame1 { border: solid 1px #ccc; width: 902px; margin: 10px auto; height: 500px; background: white; }
+			.stage { float: left; width: 300px; overflow: auto; height: 498px; 
+								border-right: solid 1px #ccc; position: relative; }
+								
+			
+			.rightSxn 		{ width: 600px; float: right;}
+			.field_adder 	{ height: 60px; border-bottom: solid 1px #ccc; padding: 5px 10px 10px; }
+			.controlPanel 	{ float: left; width: 150px; border: solid 1px #ccc;
+								background: #f0f0f0; height: 438px; overflow: auto; padding-bottom: 10px; }
+			.controlPanel .header { text-align: center; line-height: 30px; font-size: 12px; font-weight: bold; text-transform: uppercase}
+			
+			label 			{ font-weight: bold; font-size: 11px; text-transform: uppercase; 
+								display: block; margin-top: 7px; margin-bottom: 3px;  }
+			input			{ width: 80px;}
+			.deleter 		{ cursor: pointer; padding-left: 10px;}
+		</style>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		
+		<script>
+			
+			var app = angular.module('CssTutorialApp', []);
+
+			app.controller('CssTutorialCtrl', ['$scope',
+				function($scope){
+					$scope.style = {};
+					$scope.targetNode = 'Select...';
+					$scope.targetStyle = 'Select...';
+					
+					$scope.buildPropList = function(){
+
+						// declare prop names
+						$scope.propNames = [
+							'display', 'background', 
+							'width', 'height',  'overflow',
+							'border','margin','padding',
+							'float', 'clear',
+							'position', 'top', 'left', 'bottom', 'right', 'z-index',
+							'vertical-align'
+						];
+					
+						// build propHash look-up dictionary from fieldNames
+						$scope.propHash = {};
+						$.each($scope.propNames, function(propIndex, prop) {
+							var jsName = prop;
+							var dashIndex = prop.indexOf('-');
+							if(dashIndex != -1){
+								var jsName = prop.substr(0,dashIndex);
+								jsName += prop[dashIndex + 1].toUpperCase();
+								jsName += prop.substring(dashIndex + 2);
+							}
+							$scope.propHash[prop] = jsName;
+						});
+					}
+					$scope.buildPropList();
+
+					$scope.reset = function(){
+						$scope.objSet = [
+							{
+								name: 'container',
+								styles:{
+									border : '2px solid red',
+									height : '250px',
+									width  : '250px',
+									margin : '20px auto'
+								},
+								fieldList : ['border','height','width','margin']
+							},
+							{
+								name: 'obj1',
+								styles : {
+									background: 'green'
+								}
+							},
+							{
+								name: 'obj2',
+								styles: {
+									background: 'yellow'
+								}
+							},
+							{
+								name: 'obj3',
+								styles: {
+									background: 'blue'
+								}
+							}
+						]
+						$.each($scope.objSet, function(objIndex, obj){
+							if(objIndex == 0) return;
+							obj.styles['height'] = '60px';
+							obj.styles['width'] = '60px';
+							obj.fieldList = ['background', 'height', 'width'];
+						});
+						
+						// if form state changes, update styles										
+						$scope.$watch("objSet", function(){
+							$scope.updateStyles();
+						}, true);
+					}					
+					$scope.reset();
+					
+					// add a style
+					$scope.addStyle = function(){
+						$scope.objSet[$scope.targetNode].fieldList.push($scope.targetStyle);
+					}
+					
+					// if deleting, remove from style (active) and fieldList (form)
+					$scope.deleteProperty = function(propName, obj){
+						$.each(obj.fieldList, function(fieldIndex, field){
+							if(field == propName) {
+								obj.fieldList[fieldIndex] = false;
+							}
+						});
+					}
+					
+					// update styles
+					$scope.updateStyles = function(){					
+						$.each($scope.objSet, function(objIndex, obj) {
+							
+							// iterate through style object and set properties
+							$.each(obj.styles, function(propName, propValue){
+								var styleObj = {};
+								var jsName = $scope.propHash[propName];
+								styleObj[jsName] = propValue;
+								$('.' + obj.name).css(styleObj);
+							});
+						
+							// iterate through all props, if not in style obj, set to empty string
+							$.each($scope.propNames, function(propIndex, propName) {
+								if($.inArray(propName, obj.fieldList) == -1) {
+									var styleObj = {};
+									var jsName = $scope.propHash[propName];
+									styleObj[jsName] = '';
+									$('.' + obj.name).css(styleObj);
+								}
+							});
+						});
+					}
+					
+				}
+			]);
+		</script>
+	</head>
+	
+	<body>
+		<div class="cssTutorialFrame" ng-app="CssTutorialApp" ng-controller="CssTutorialCtrl">
+			<div class="title">Rob's CSS Machine</div>
+			<div class="frame1">
+				<div class="stage">
+					<div class="container">
+						<div class="obj1"></div>
+						<div class="obj2"></div>
+						<div class="obj3"></div>											
+					</div>
+				</div>
+				<div class="rightSxn">
+					<div class="field_adder">
+						<div style="float: left;">
+							<label>Target</label>
+							<select ng-model="targetNode" >
+								<option>Select...</option>
+								<option ng-repeat="(index, obj) in objSet" 
+										value="{{index}}">
+									{{obj.name}}
+								</option>
+							</select>
+						</div>
+						<div style="float: left; margin-left: 15px; ">
+							<label>Add Property</label>
+							<select ng-model="targetStyle" >
+								<option>Select...</option>
+								<option ng-repeat="prop in propNames">
+									{{prop}}
+								</option>
+							</select>
+						</div>
+						<div style="float: left; margin-left: 15px; padding-top: 22px;">
+							<button ng-click="addStyle()">ADD STYLE</button>
+						</div>
+						<div style="float: right; margin-right: 15px; padding-top: 22px;">
+							<button ng-click="reset()">RESET</button>
+						</div>
+					</div>
+					<div class="controlPanel" ng-repeat="obj in objSet">
+						<div class="header" >{{obj.name}}</div>
+						<div style="height: 4px; background: {{obj.styles.background}}; border: {{obj.styles.border}}"></div>
+						<table>
+							<tr ng-repeat="property in obj.fieldList  track by $index" ng-if="property">
+								<td>
+									<div class="deleter" ng-click="deleteProperty(property, obj)">X&nbsp;&nbsp;</div>
+								</td>
+								<td>
+									<label>{{property}}</label>
+									<input ng-model="obj.styles[property]" />
+								</td>	
+							</tr>
+						</table>
+					</div>
+
+
+
+
+				</div>
+				
+			</div>
+		</div>		
+		
+		
+	</body>
+</html>

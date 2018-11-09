@@ -1,0 +1,35 @@
+
+
+
+SQL OPERATIONS
+
+- Import SQL
+
+
+COMPANIES TABLE
+- Which companies are located in Portland, Maine?
+- Which companies are in the "Staffing and Recruiting" category?
+- WEX is moving their headquarters to Portland. Can you update its location?
+- Can you find the LinkedIn page for Pro Search Inc.?
+- Can you find another company on LinkedIn and insert it into the table?
+
+
+JOBS TABLE
+- Which jobs are in the Greater Boston area?
+- Which jobs are at WEX?
+- Which jobs have "senior" in the title?
+- How many companies have jobs listed? What are they?
+- How many jobs are at WEX? Can you return this number as "total_jobs"?
+- Can you get the list of jobs ordered by job title in alphabetical order?
+- Can you reverse that list?
+- Pro Search Inc. has removed the "programmer" job. Can you delete it?
+- Liberty Mutual filled their job opening. Can you update the table?
+- CyberCoders just listed a job as an "Intern" in Saco, Maine. Can you add it?
+
+
+RELATIONAL QUERIES
+- Which jobs are at staffing and recruiting companies?
+- How many jobs are listed at companies based in Irvine, CA?
+
+
+

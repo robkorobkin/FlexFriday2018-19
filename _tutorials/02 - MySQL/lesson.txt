@@ -1,0 +1,22 @@
+
+<DRAW NETWORKING DIAGRAM>
+
+SQL
+- Standard Query Language
+
+A way of formatting requests to a data server describing actions you want that server to take on a database.
+- Create
+- Read
+- Update Delete
+
+
+<DRAW TABLE>
+
+
+Each:
+Table: a collection of things that are of the same type.
+
+Row: an individual thing of that type.
+
+Column: An Attribute \ Field that each thing has a value for.
+

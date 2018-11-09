@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<style>
+			html, body {
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				
+			}
+
+			/* ROW LAYOUT */
+			.flexWrapper {
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+			}
+			.sidebar {
+				background: red;
+				flex: 0 0 200px;
+			}
+			.main {
+				background: blue;
+				flex-grow: 1;
+			}
+
+
+			/* COLUMN LAYOUT */
+			.flexColumn {
+				height: 100%;
+				flex-direction: column;
+				display: flex;
+			}
+			.mainTop {
+				flex: 0 0 50px;
+				background: yellow;
+			}
+			.mainBottom {
+				flex-grow: 1;
+				background: white;
+				padding: 20px;
+				background:  #eee;
+
+			}
+			.mainBottom .content {
+				background: white;
+				
+				height: 100%;
+				width: 100%;
+			 	box-shadow: 4px 4px 4px #ccc;
+			 	border: solid 1px #ccc;
+			}
+
+		</style>
+
+	</head>
+	<body>
+		<div class="altView" style="display: none;">
+			I AM NOT FLEX
+		</div>
+
+		<div class="flexWrapper">
+			<div class="sidebar">
+				THIS IS THE SIDEBAR
+			</div>
+			<div class="main">
+				<div class="flexColumn">
+					<div class="mainTop">
+						TOP
+					</div>
+					<div class="mainBottom">
+						<div class="content"></div>
+					</div>
+				</div>
+
+			</div>
+		</div>	
+	</body>
+</html>

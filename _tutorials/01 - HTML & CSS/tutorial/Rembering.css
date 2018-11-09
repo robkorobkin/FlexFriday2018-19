@@ -1,0 +1,67 @@
+/* This first thing makes the text white and the backround of the text gray this will target ALL things that are inside a <p></p> */
+
+p{
+	Color:white;
+	Backround:gray; 
+}
+
+/* The style of this is divieded up into 3 sections |selector| Which in this case is h1 and in the {Property|Vaule} Which in this 
+case the property is color and the value is orange (Selector { Property | Vaule }) */
+
+h1{color: orange;}  
+
+/* This makes something called an id so you can later put <p id="name of id"> or in this case <p id="whitetext"> to make the text white
+more effieciently to make an id you put a "#" before where the selector would normally be and instead of a selector put the name 
+of the id you are naming which in this case is "whitetext" */
+
+#whitetext {
+	color: white;
+}
+
+/* This makes something called an called so you can later put <p class="name of class"> or in this case <p class="whitetext"> 
+to make the text white more effieciently to make an id you put a "." before where the selector would normally be and instead of a 
+selector put the name of the class you are naming which in this case is "whitetext" 
+
+This is very simalar to ids, The major difference being ids can only be applied once per page, so classes are a better choice 
+most of the time */
+
+.whitetext {
+	color:white;
+}
+
+/* To get super specific you can combine 2/3 or all 3 of them to target only certain tags. In this case we are making a class that 
+will target only things in a <p></p> when specified by a <div class="whitetext"></div> Everything else in that <div></div> will stay 
+as it was or however other way you style it */
+
+.whitetext p {
+	color:white;
+}
+
+/* Font is changed using the font-family property a link to all different font family things is:
+http://www.w3schools.com/cssref/css_websafe_fonts.asp  */
+
+.font {
+	font-family: arial
+}
+
+/* Font size is changed using the attribute font-size as shown below. There are 4 presets built in which are small, medium, large, 
+x-large, you can also use "px" and "%" and decimals */
+
+.p {
+	font-size: small;
+}
+
+/* Font style is made by using the attribute Font-style which can make text bold, italics, underlined or crossed out */
+
+
+
+
+
+
+
+
+
+
+
+
+

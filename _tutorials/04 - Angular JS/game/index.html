@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+		<!-- JQUERY \ ANGULAR -->	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+
+
+		<!-- dfl JS -->
+		<script src="game.js"></script>
+
+		<style type="text/css">
+			
+			body { 
+				background: #ccc;
+			}
+
+			#stage {
+				border: solid 1px #555;
+				border-radius: 15px;
+				height: 400px;
+				width: 600px;
+				margin: 40px auto;
+				background: white;
+				position: relative;
+			}
+
+
+			.ball {
+				position: absolute;
+				border-radius: 50%;
+				border: solid 1px #ccc;
+			}
+
+			#adder {
+				text-align: center;
+			}
+
+
+		</style>
+
+		
+
+	</head>
+	
+	<body  ng-app="gameApp" ng-controller="gameCtrl">
+
+		
+
+		<!-- BOUNCING BALLS -->
+		<div id="stage">
+			<div ng-repeat="ball in balls" class="ball" 
+				style="	top: {{ball.y}}px; 		left: {{ball.x}}px;
+						height: {{ball.h}}px; 	width: {{ball.w}}px;
+						background: {{ball.background}};
+				"></div>
+		</div>
+
+
+
+		<!-- CONTROLS -->
+		<div id="adder">
+			<select ng-model="newBall.size">
+				<option value="20">Small</option>
+				<option value="50">Medium</option>
+				<option value="80">Large</option>
+			</select>
+
+			<select ng-model="newBall.color">
+				<option>Red</option>
+				<option>Black</option>
+				<option>Blue</option>
+				<option>Yellow</option>
+				<option>White</option>
+			</select>
+
+			<select ng-model="newBall.speed">
+				<option value="4">Slow</option>
+				<option value="8">Mid</option>
+				<option value="12">Fast</option>
+			</select>
+
+			<button ng-click="addBall()">ADD BALL</button>
+
+		</div>
+
+
+	</body>
+</html>

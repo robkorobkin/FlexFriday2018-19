@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+     <meta charset="UTF-8">
+    <style>
+      body  {
+        font-family: arial,sans-serif-light,sans-serif;
+      }
+      select {
+        height: 40px; font-size: 20px; display: block;
+        margin-bottom: 15px; width: 100%
+      }
+
+      .restaurant_list      { width: 400px; margin: 0px auto;}
+      .restaurant           { border: solid 1px #aaa; padding: 15px; }
+      .restaurant .name     { font-size: 30px; }
+      .restaurant .address  { font-size: 13px; padding: 5px 0; color: rgb(26, 13, 171)}
+      .restaurant .cuisine  { font-size: 13px; color: rgb(135, 135, 135)}
+    </style>
+
+    <Script>
+      $(function(){
+
+        $('#restaurant_selector').change(function(){
+          $('.restaurant').hide();
+          $('#restaurant_' + this.value).show();
+        })
+
+        // MORE COMPLEX
+        // $('#restaurant_selector').change(function(){
+        //   var selected = this.value;
+        //   $('.restaurant').fadeOut(400, function(){
+        //       $('#restaurant_' + selected).delay(600).fadeIn();
+        //   });
+        // })
+
+      })
+    </script>
+
+  </head>
+  <body>
+
+
+
+    <div class="restaurant_list">
+
+      <select id="restaurant_selector">
+        <option value="1">Local Sprouts</option>
+        <option value="2">Green Elephant</option>
+        <option value="3">Buja Belle</option>
+      </select>
+
+      <!-- RESTAURANT #1 - Local Sprouts -->
+      <div id="restaurant_1" class="restaurant">
+          <div class="name">Local Sprouts</div>
+          <div class="address">649 Congress St.</div>
+          <div class="cuisine">Organic</div>
+      </div>
+
+      <!-- RESTAURANT #2 - Green Elephant -->
+      <div id="restaurant_2" class="restaurant">
+          <div class="name">Green Elephant</div>
+          <div class="address">608 Congress St.</div>
+          <div class="cuisine">Vegetrian</div>
+      </div>
+
+      <!-- RESTAURANT #3 - Buja Belle -->
+      <div id="restaurant_3" class="restaurant">
+          <div class="name">Buja Belle</div>
+          <div class="address">St. John St.</div>
+          <div class="cuisine">Burundian</div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
