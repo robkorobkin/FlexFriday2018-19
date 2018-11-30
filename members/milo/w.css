@@ -30,12 +30,11 @@ body, html {
 }
 .header {
 	background: url(starfield-banner.jpg);
-
+	padding-right:3.3vh ;
+	padding-left:3.3vh ;
 	height: 75px;
-	max-width:1300px;
+	max-width:1500px;
 
-	margin-right:auto;
-	margin-left:auto;
 }
 
 .header img {
@@ -109,9 +108,9 @@ vertical-align: middle;
 	width: auto !important;
 	margin-top: 11px;
 }
-.im{
+.im {
 	padding: 10px;
-	width: 80px;
+	padding-left: 1px !important;
 	vertical-align: middle;
 	float: left;
 	height: 3.6em;
@@ -128,16 +127,14 @@ margin-left:173px;
 
 
 
-
-
 }
 .bodycontaer
 {
      width: auto;
-    margin: 0px auto !important;
-    margin-top: 0px !important;
+    margin:  auto !important;
+    margin-top: auto !important;
     margin-right: auto !important;
-    margin-bottom: 0px !important;
+    margin-bottom: auto !important;
     margin-left: auto !important;
 }
 .bodys
@@ -146,20 +143,18 @@ margin-left:173px;
     background-color: #000;
     background-position: 0em -10em;
     background-repeat: no-repeat;
-    height: 60vh;
-   
-   /* margin-top: 80px;*/
+    /*height: 60vh; margin-top: 80px;*/
 
 	}
  .h2
 	{
     color: #fff;
     font-weight: bold;
-    font-size: 3em !important;
+    font-size: 5em !important;
     padding: 10px 10px 10px 0px;
     vertical-align: middle;
     display: inline-block;
-        margin-top: 20px;
+    margin-top: 20px;
     margin-bottom: 10px;
 
 
@@ -168,7 +163,7 @@ margin-left:173px;
 	{
 	color: #83AEF7 !important;
     font-weight: bold ;
-    font-size: 1.2em;
+    font-size: 1.4em;
     display: inline-block;
     vertical-align: middle;
     margin-top: 1em;
@@ -183,10 +178,19 @@ width: 100%;
     background: #000;
     padding: 1.25em .7em 3em;
     overflow: hidden;
-    
+}
+.sub-head{
+
+
+
 
 
 }
+.sub-head p {
+color: white;
 
 
+
+
+}
 
