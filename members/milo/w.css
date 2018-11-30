@@ -30,15 +30,14 @@ body, html {
 }
 .header {
 	background: url(starfield-banner.jpg);
-	padding-right:3.3vh ;
-	padding-left:3.3vh ;
+	width: 1003px;
 	height: 75px;
 	max-width:1500px;
 
 }
 
 .header img {
-	padding: 10px;
+	padding: 8px;
 	width: 80px;
 	vertical-align: middle;
 	float: left;
@@ -187,10 +186,17 @@ width: 100%;
 
 }
 .sub-head p {
-color: white;
+	color: white;
 
+	box-sizing: border-box;
+	font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	font-size: 13.3px;
+	font-weight: 600;
+	line-height: 16.8px;
 
+	margin: 0;
 
+	-moz-osx-font-smoothing: grayscale;
 
 }
 
