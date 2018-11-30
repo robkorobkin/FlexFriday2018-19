@@ -5,12 +5,14 @@ body, html {
 	margin: 0;
 	padding: 0;
 	background: black;
+	-moz-osx-font-smoothing: grayscale;
+    font-family: 'Titillium Web', sans-serif
 }
-.page{
-padding-top:65px;
-padding-bottom:10px;
-padding-left:40px;
-padding-right:40px;
+
+.page
+{
+    min-height: 350px;
+    padding: 65px 40px 10px;
 }
 
 .contaerheader{
@@ -71,6 +73,7 @@ height: 100px;
 
 .header ul li:last-child a {
 	border-right: none;
+
 }
 
 /* MAIN NAV LINKS */
@@ -91,16 +94,41 @@ height: 100px;
 	-moz-osx-font-smoothing: grayscale;
     font-family: 'Titillium Web', sans-serif
 }
+.img2{
+vertical-align: middle;
+	float: left;
+	height: 3.6em;
+
+
+
+
+}
 .imging
 {
 	height: 37px !important;
 	width: auto !important;
 	margin-top: 11px;
 }
+.im{
+	padding: 10px;
+	width: 80px;
+	vertical-align: middle;
+	float: left;
+	height: 3.6em;
+	
+
+}
 .allw
 {
 margin-right:173px; 
 margin-left:173px;
+
+}
+.boodyandfootercontaer{
+
+
+
+
 
 }
 .bodycontaer
@@ -118,6 +146,7 @@ margin-left:173px;
     background-color: #000;
     background-position: 0em -10em;
     background-repeat: no-repeat;
+    height: 60vh;
    
    /* margin-top: 80px;*/
 
@@ -126,7 +155,7 @@ margin-left:173px;
 	{
     color: #fff;
     font-weight: bold;
-    font-size: 5em !important;
+    font-size: 3em !important;
     padding: 10px 10px 10px 0px;
     vertical-align: middle;
     display: inline-block;
@@ -139,7 +168,7 @@ margin-left:173px;
 	{
 	color: #83AEF7 !important;
     font-weight: bold ;
-    font-size: 1.7em;
+    font-size: 1.2em;
     display: inline-block;
     vertical-align: middle;
     margin-top: 1em;
@@ -148,7 +177,16 @@ margin-left:173px;
 
 
 }
+.footer
+{
+width: 100%;
+    background: #000;
+    padding: 1.25em .7em 3em;
+    overflow: hidden;
+    
 
+
+}
 
 
 
