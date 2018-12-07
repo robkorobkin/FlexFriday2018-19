@@ -17,8 +17,8 @@ body, html {
 
 .contaerheader{
 
-    margin-left: auto;
-    margin-right:auto;
+    margin-left:0;
+    margin-right:0;
 
 
     display: flex;
@@ -30,14 +30,13 @@ body, html {
 }
 .header {
 	background: url(starfield-banner.jpg);
-	width: 1003px;
-	height: 75px;
-	max-width:1500px;
+	height: 80px;
+	min-width:1366px;
 
 }
 
 .header img {
-	padding: 8px;
+	padding: 10px;
 	width: 80px;
 	vertical-align: middle;
 	float: left;
@@ -55,6 +54,7 @@ body, html {
 	float: left;
 	height: 76px;
 	
+
 }
 .header ul li {
 
@@ -87,7 +87,7 @@ height: 100px;
 
 	color: white;
 	text-decoration: none;
-	font-size: 13.3px;
+	font-size: 20.58px;
 	font-weight: 400;
 	-moz-osx-font-smoothing: grayscale;
     font-family: 'Titillium Web', sans-serif
@@ -103,13 +103,15 @@ vertical-align: middle;
 }
 .imging
 {
-	height: 37px !important;
-	width: auto !important;
-	margin-top: 11px;
+	width:180px !important;
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:28px;
+	margin-top:19.8px;
 }
 .im {
 	padding: 10px;
-	padding-left: 1px !important;
+	padding-left: 10px !important;
 	vertical-align: middle;
 	float: left;
 	height: 3.6em;
@@ -118,8 +120,8 @@ vertical-align: middle;
 }
 .allw
 {
-margin-right:173px; 
-margin-left:173px;
+/*margin-right:173px; 
+margin-left:173px;*/
 
 }
 .boodyandfootercontaer{
