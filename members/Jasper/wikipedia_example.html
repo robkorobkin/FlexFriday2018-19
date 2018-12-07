@@ -7,13 +7,85 @@
 		<title>Website - Wikipedia</title>
 
 		<style>
-			.wikipedia_logo {
-				width: 125px;
-			}
+            body, html { margin: 0; padding: 0; }
 
-			.website_img {
-				width: 240px;
-			}
+
+
+
+            .sidebar_links {
+
+                /* BLOCK STYLES */
+                width: 160px;
+                padding-left: 8px;
+                padding-right: 8px;
+                padding-top: 15px;
+                background: #f6f6f6;
+            }
+
+            .wikipedia_logo {
+
+                /* BLOCK STYLES */
+                display: block;
+                width: 125px;
+                
+                margin: 0px auto 20px;
+            }
+
+
+            .sidebar_links a {
+
+                /* BLOCK STYLES */
+                display: block;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                padding-left: 20px;
+
+                
+                /* INLINE STYLES */
+                color: rgb(6, 69, 173);
+                font-family: sans-serif;
+                font-size: 12px;
+                line-height: 13.5px;
+                text-decoration: none;
+
+            }
+
+
+            .sidebar_links .link_header {
+                
+
+                /* BLOCK STYLES */
+                border-bottom: solid 1px rgb(200, 200, 200);
+                padding-bottom: 3px;
+                margin-top: 15px;
+                margin-bottom: 5px;
+                margin-left: 20px;
+                
+
+                /* INLINE STYLES */
+                color: rgb(68, 68, 68);
+                font-family: sans-serif;
+                font-size: 12px;
+                font-weight: 400;
+                
+            }
+
+/*
+            .sidebar_links a
+
+
+            select elements that are contained by ele r_links" and are <a> tags
+
+            select 
+
+                elements that are <a> tags
+
+                contained by 
+
+                elements with the class "sidebar_links" 
+*/
+            
+
 
 		</style>
 	</head>
@@ -21,43 +93,45 @@
 
 	<!-- BODY -->
 	<body>
-		This is my demo.
 
 		<div class="sidebar_links">
 
+            <img src="images/Wikipedia-logo-en-big.png" class="wikipedia_logo" />
+
     		<a href="https://en.wikipedia.org/wiki/Main_Page">Main page</a>
     		<a href="https://en.wikipedia.org/wiki/Main_Page">Contents</a>
-		    Featured content
-		    Current events
-		    Random article
-		    Donate to Wikipedia
-		    Wikipedia store
+		    <a href="https://en.wikipedia.org/wiki/Main_Page">Featured content</a>
+		    <a href="https://en.wikipedia.org/wiki/Main_Page">Current events</a>
+		    <a href="https://en.wikipedia.org/wiki/Main_Page">Random article</a>
+		    <a href="https://en.wikipedia.org/wiki/Main_Page">Donate to Wikipedia</a>
+		    <a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia store</a>
 
 			<div class="link_header">Interaction</div>
 
-    Help
-    About Wikipedia
-    Community portal
-    Recent changes
-    Contact page
+            <a href="https://en.wikipedia.org/wiki/Main_Page">Help</a>
+            <a href="https://en.wikipedia.org/wiki/Main_Page">About Wikipedia</a>
+            <a href="https://en.wikipedia.org/wiki/Main_Page">Community portal</a>
+            <a href="https://en.wikipedia.org/wiki/Main_Page">Recent changes</a>
+            <a href="https://en.wikipedia.org/wiki/Main_Page">Contact page</a>
 
-Tools
+            <div class="link_header">Tools</div>
 
-    What links here
-    Related changes
-    Upload file
-    Special pages
-    Permanent link
-    Page information
-    Wikidata item
-    Cite this page
+            <a href="https://en.wikipedia.org/wiki/Main_Page">What links here</a>
+            <a href="https://en.wikipedia.org/wiki/Main_Page">Related changes</a>
+            <a href="https://en.wikipedia.org/wiki/Main_Page">Upload file</a>
+            <a href="https://en.wikipedia.org/wiki/Main_Page">Special pages</a>
+            <a href="https://en.wikipedia.org/wiki/Main_Page">Permanent link</a>
+            <a href="https://en.wikipedia.org/wiki/Main_Page">Page information</a>
+            <a href="https://en.wikipedia.org/wiki/Main_Page">Wikidata item</a>
+            <a href="https://en.wikipedia.org/wiki/Main_Page">Cite this page</a>
 
-Print/export
+            <div class="link_header">Print/export</div>
 
-    Create a book
-    Download as PDF
-    Printable version
+            <a href="https://en.wikipedia.org/wiki/Main_Page">Create a book</a>
+            <a href="https://en.wikipedia.org/wiki/Main_Page">Download as PDF</a>
+            <a href="https://en.wikipedia.org/wiki/Main_Page">Printable version</a>
 
+        </div>
 
 <!-- HEADER -->
 
