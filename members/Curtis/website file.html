@@ -1981,36 +1981,3 @@ if (!window.ClickTaleSettings.PTC.StartRecordingNow) {
 
 
 !function(){try{var e=window.chrome,t=window.navigator&&window.navigator.vendor;null!=e&&"Google Inc."===t&&window.addEventListener&&addEventListener("message",n,!1)}catch(e){}function n(e){var t,n;try{t=JSON.parse(e.data)}catch(e){return}!1!==new RegExp("(app[.]clicktale[.]com)($|:)").test(e.origin)&&(window.ct_ve_parent_window=e.source,"CT_testRules"==t.name&&(sessionStorage.setItem("CT_testRules",!0),console.log((new Date).toJSON(),"PostPTC: testRules ",sessionStorage.getItem("CT_testRules")),window.ct_ve_parent_window.postMessage({name:"testRulesRecieved",params:{}},"*")),"CTload_ve"===t.function&&"function"==typeof ClickTaleGetPID&&null!==ClickTaleGetPID()&&(!function(){console.log((new Date).toJSON(),"PostPTC: start loading test rules");var e=o("script");e.setAttribute("type","application/javascript"),e.setAttribute("id","ctTestRulesModule"),e.onload=function(){sessionStorage.setItem("CT_testRules_Loaded",!0),console.log((new Date).toJSON(),"PostPTC: test rules loaded")};var t=ClickTaleGetPID();e.src=ctVEconfig.VE_BASE_URL+"rulesEngineContent/TestPCC/"+t,document.getElementById("ctTestRulesModule")||document.body.appendChild(e)}(),(n=o("script")).setAttribute("type","text/javascript"),n.setAttribute("id","ctVisualEditorClientModule"),n.src=ctVEconfig.VE_BASE_URL+"client/dist/veClientModule.js",document.getElementById("ctVisualEditorClientModule")||document.body.appendChild(n)))}function o(e){return document.createElementNS?document.createElementNS("http://www.w3.org/1999/xhtml",e):document.createElement(e)}}();</script><iframe id="clicktaleCrossDomain" class="hidden" src="https://cdnssl.clicktale.net/www/tc/crossdomainInclCEC.html?cookie=WRUIDCD03072018" async="true" frameborder="0" width="0" height="0" style="display:none" aria-hidden="true" tabindex="-1" title="empty"></iframe><script type="text/javascript" crossorigin="anonymous" src="https://cdnssl.clicktale.net/www32/pcc/755cc4ab-c4bf-46d8-a608-d3c5d66fabac.js?DeploymentConfigName=Release_20180925&amp;Version=3"></script><div id="ClickTaleDiv" style="display: none;"></div><script crossorigin="anonymous" src="https://cdnssl.clicktale.net/www/WR-latest.js" type="text/javascript" async=""></script><script src="https://cdnssl.clicktale.net/www/monitor-latest.js" async="" type="text/javascript" crossorigin="anonymous"></script><div id="meControlDropdown" class="msame_Drop_root" style="display: none;" aria-expanded="false"><div tabindex="0" class="msame_focus_trap" aria-hidden="true"></div><div class="msame_Drop_topb"></div><div class="msame_Drop_content" role="dialog" tabindex="-1" aria-label="Your account" data-bi-dnt="true" data-bi-mto="true"><div class="msame_Drop_active"><div class="msame_Drop_active_pic"><div class="msame_Drop_active_piccont"><div class="msame_Drop_active_picframe"><a href="#" title="Change picture" data-mc-m="{&quot;id&quot;:&quot;changePicture&quot;,&quot;aN&quot;:&quot;Active Account&quot;,&quot;cT&quot;:&quot;Button&quot;}"><img role="presentation" src="https://storage.live.com/users/0x397e0404349df9b2/myprofile/expressionprofile/profilephoto:Win8Static,UserTileMedium,UserTileStatic/MeControlXXLUserTile?ck=48863&amp;ex=24" alt=""></a></div></div></div><div class="msame_Drop_active_right"><div class="msame_TxtTrunc msame_Drop_active_name">Curtis Ruel</div><div class="msame_TxtTrunc msame_Drop_active_email">curtismruel@gmail.com</div></div></div><div class="msame_Drop_rewards" style=""><div id="msame_si5" class="msame_Drop_SI" data-mc-m="{&quot;id&quot;:&quot;rewards&quot;,&quot;aN&quot;:&quot;Me Control Dropdown&quot;,&quot;cT&quot;:&quot;Link&quot;}"><a href="https://account.microsoft.com/rewards/dashboard" target="_self" class="msame_TxtTrunc">Rewards (2,794 points)</a></div></div><div class="msame_Drop_account"><div id="msame_si2" class="msame_Drop_SI" data-mc-m="{&quot;id&quot;:&quot;microsoftAccount&quot;,&quot;aN&quot;:&quot;Me Control Dropdown&quot;,&quot;cT&quot;:&quot;Link&quot;}"><a href="https://account.microsoft.com/?ref=MeControl&amp;lang=en-US&amp;partnerId=mshomepage&amp;partnerDomain=www.microsoft.com" target="_self" class="msame_TxtTrunc">My Microsoft account</a></div></div><div class="msame_Drop_links" style="display: none;"><div class="msame_Drop_links_list"></div></div><div class="msame_Drop_signIn"></div><div class="msame_Drop_signOut"><div id="msame_si3" class="msame_Drop_SI" data-mc-m="{&quot;id&quot;:&quot;signOut&quot;,&quot;aN&quot;:&quot;Me Control Dropdown&quot;,&quot;cT&quot;:&quot;Link&quot;}"><a href="#" target="_self" class="msame_TxtTrunc">Sign out</a></div></div><div class="msame_Drop_accts" style="display: none;"><div class="msame_Drop_sep"></div><div class="msame_Drop_accts_list"></div></div><div class="msame_Drop_sneakyBtn"><div id="msame_si4" class="msame_Drop_SI" data-mc-m="{&quot;id&quot;:&quot;closeDialog&quot;,&quot;aN&quot;:&quot;Me Control Dropdown&quot;,&quot;cT&quot;:&quot;Link&quot;}"><a href="#" target="_self" class="msame_TxtTrunc" role="button">Dismiss dialog</a></div></div></div><div tabindex="0" class="msame_focus_trap" aria-hidden="true"></div></div></body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
