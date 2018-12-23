@@ -6,7 +6,8 @@ body, html {
 	padding: 0;
 	background: black;
 	-moz-osx-font-smoothing: grayscale;
-    font-family: 'Titillium Web', sans-serif
+	
+    font-family: 'Titillium Web', sans-serif 
 }
 
 .page
@@ -31,9 +32,9 @@ body, html {
 .header {
 	background: url(starfield-banner.jpg);
 	height: 80px;
-	min-width:1366px;
-
+	min-width:1366px ;
 }
+
 
 .header img {
 	padding: 10px;
@@ -46,6 +47,7 @@ body, html {
 .header ul {
 	float:left;
 	margin: 0;
+
 
 }
 
@@ -104,20 +106,25 @@ vertical-align: middle;
 .imging
 {
 	width:180px !important;
-	margin-bottom:0px;
-	margin-left:0px;
-	margin-right:28px;
-	margin-top:19.8px;
+	margin-top:8px;
+	vertical-align: middle;
+	position: relative;
+    float: right;
+    margin: 0.7em 2em 0 0 !important;
+    right: auto;
+    top: auto;
+	
+
 }
 .im {
 	padding: 10px;
 	padding-left: 10px !important;
 	vertical-align: middle;
 	float: left;
-	height: 3.6em;
-	
-
+	width: 80px;
+    vertical-align: middle;
 }
+   }
 .allw
 {
 /*margin-right:173px; 
@@ -154,22 +161,23 @@ margin-left:173px;*/
     font-size: 5em !important;
     padding: 10px 10px 10px 0px;
     vertical-align: middle;
+    display: inline-block;    color: #fff;
+    font-weight: bold;
+    font-size: 5em !important;
+    padding: 10px 10px 10px 0px;
+    vertical-align: middle;
     display: inline-block;
-    margin-top: 20px;
-    margin-bottom: 10px;
 
 
 	}
  .h3
 	{
-	color: #83AEF7 !important;
-    font-weight: bold ;
-    font-size: 1.4em;
+	    color: #83AEF7;
+    font-weight: bold;
+    font-size: 1.7em;
     display: inline-block;
     vertical-align: middle;
     margin-top: 1em;
-    margin-top: 20px;
-    margin-bottom: 10px;
 
 
 }
@@ -190,15 +198,35 @@ width: 100%;
 .sub-head p {
 	color: white;
 
-	box-sizing: border-box;
-	font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-	font-size: 13.3px;
-	font-weight: 600;
-	line-height: 16.8px;
-
-	margin: 0;
+	display: block;
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+    font-size: 0.95em ;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
 
 	-moz-osx-font-smoothing: grayscale;
-
 }
 
+.footer_links{
+list-style-type: none;
+    margin-top:  20px;
+    margin-bottom: 20px;
+    padding-left: 0;
+
+}
+.footer_links li{
+	float: right;
+    padding-left: 30px;
+    display: inline-block;
+    width: auto;
+}
+.footer_links li a {
+    padding-left: 30px;
+    display: inline-block;
+    width: auto;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    color: #5d7fb9;
+    font-weight: bold;
+    font-size: 0.9em;
+}
